@@ -22,6 +22,7 @@ public class addAndSearchFrame extends JFrame {
         JFrame frame = new JFrame();
         frame.setSize(450, 400);
         frame.setContentPane(panel1);
+        frame.setTitle("Add or search");
         frame.setVisible(true);
         addNewEmailButton.addActionListener(new ActionListener() {
             @Override

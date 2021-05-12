@@ -1,7 +1,4 @@
-import javax.management.remote.JMXConnectorFactory;
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -28,7 +25,7 @@ public class MainFrame extends JFrame {
         JButton button1 = new JButton();
         button1.setBounds(240, 250, 80, 30);
         button1.setText("Delete");
-
+        frame.setTitle("Table");
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

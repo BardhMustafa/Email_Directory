@@ -31,5 +31,4 @@ public class LandingFrame extends JFrame {
             }
         });
     }
-
 }
