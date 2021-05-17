@@ -53,11 +53,16 @@ public class addAndSearchFrame extends JFrame {
         searchButtonName.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EmailPerson emailPerson = functionHandler.findByName(nameS.getText());
-                if (emailPerson == null) {
-                    JOptionPane.showMessageDialog(null, "Email doesn't exist");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Name: " + emailPerson.getName() + "\n " + "Email: " + emailPerson.getEmail());
+                if (nameS.getText().length() > 0) {
+
+                    EmailPerson emailPerson = functionHandler.findByName(nameS.getText());
+                    if (emailPerson == null) {
+                        JOptionPane.showMessageDialog(null, "Email doesn't exist");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Name: " + emailPerson.getName() + "\n " + "Email: " + emailPerson.getEmail());
+                    }
+                }else{
+                        JOptionPane.showMessageDialog(null, "Mistakes on typing");
                 }
 
             }
@@ -65,11 +70,15 @@ public class addAndSearchFrame extends JFrame {
         searchButtonEmail.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EmailPerson emailPerson = functionHandler.findByEmail(emailS.getText());
-                if (emailPerson == null) {
-                    JOptionPane.showMessageDialog(null, "Email doesn't exist");
+                if (emailS.getText().length() > 0) {
+                    EmailPerson emailPerson = functionHandler.findByEmail(emailS.getText());
+                    if (emailPerson == null) {
+                        JOptionPane.showMessageDialog(null, "Email doesn't exist");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Name: " + emailPerson.getName() + "\n " + "Email: " + emailPerson.getEmail());
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Name: " + emailPerson.getName() + "\n " + "Email: " + emailPerson.getEmail());
+                    JOptionPane.showMessageDialog(null, "Mistakes on typing!");
                 }
             }
         });
